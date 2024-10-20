@@ -1,0 +1,28 @@
+<div class="container mt-5 p-5 border rounded bg-light shadow">
+    <h2 class="text-center mb-4">Employee Entry Form</h2>
+    <form (ngSubmit)="addEmployee()" class="row g-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" [(ngModel)]="employee.name" name="name" class="form-control" placeholder="Enter name" required />
+      </div>
+  
+      <div class="col-md-6">
+        <label for="position" class="form-label">Position</label>
+        <input id="position" [(ngModel)]="employee.position" name="position" class="form-control" placeholder="Enter position" required />
+      </div>
+  
+      <div class="col-md-6">
+        <label for="department" class="form-label">Department</label>
+        <input id="department" [(ngModel)]="employee.department" name="department" class="form-control" placeholder="Enter department" required />
+      </div>
+  
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" [(ngModel)]="employee.email" name="email" class="form-control" placeholder="Enter email" required />
+      </div>
+  
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-custom">Add Employee</button>
+      </div>
+    </form>
+  </div>

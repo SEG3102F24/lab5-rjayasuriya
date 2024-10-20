@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3>Employee List</h3>
+      <button (click)="loadEmployees()" class="btn btn-custom">Load Employees</button>
+    </div>
+    <table *ngIf="employees.length > 0" class="table table-hover table-striped table-bordered shadow-sm">
+      <thead class="table-primary">
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Department</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.name}}</td>
+          <td>{{employee.position}}</td>
+          <td>{{employee.department}}</td>
+          <td>{{employee.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="employees.length === 0" class="alert alert-warning">No employees found!</div>
+  </div>
+  
